@@ -14,7 +14,7 @@ import { getWebAutoInstrumentations } from "@opentelemetry/auto-instrumentations
 const exporter = new OTLPTraceExporter({
   url: "https://api.honeycomb.io/v1/traces",
   headers: {
-    "x-honeycomb-team": "your-api-key",
+    "x-honeycomb-team": process.env.REACT_APP_HONEYCOMB_API_KEY
   },
 });
 

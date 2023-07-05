@@ -2,6 +2,17 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+And then it was modified to send data to Honeycomb.
+
+To use this app:
+1. Create an API key in Honeycomb with only permissions "Send data" and "Create dataset"
+2. Put that in the right environment variable:
+
+`export HONEYCOMB_API_KEY=yourapikeyhere`
+
+3. Run the app.
+4. Go look at the 'browser' dataset in Honeycomb.
+
 ## Available Scripts
 
 In the project directory, you can run:

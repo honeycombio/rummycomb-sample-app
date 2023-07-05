@@ -15,7 +15,7 @@ const run = async () => {
     const interval = Math.random() * (intervalMax - intervalMin) + intervalMin;
 
     console.log("Go to page");
-    await page.goto("http://localhost:3000?interval=" + interval, {
+    await page.goto("http://localhost:3000", {
       waitUntil: "networkidle0",
     });
     totalRequests++;

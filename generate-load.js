@@ -10,8 +10,7 @@ const run = async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  const end = Date.now() + duration * 1000;
-  while (Date.now() < end) {
+  while (true) {
     const interval = Math.random() * (intervalMax - intervalMin) + intervalMin;
 
     console.log("Go to page");
@@ -28,6 +27,7 @@ const run = async () => {
     await page.waitForTimeout(interval * 1000);
   }
 
+  // guess we'll never do this
   await browser.close();
   console.log(`Total requests sent: ${totalRequests}`);
 };

@@ -7,10 +7,9 @@ const intervalMax = 10; // Maximum interval between requests in seconds
 let totalRequests = 0;
 
 const run = async () => {
-  const browser = await puppeteer.launch();
-  const page = await browser.newPage();
-
   while (true) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
     const interval = Math.random() * (intervalMax - intervalMin) + intervalMin;
 
     console.log("Go to page");
@@ -25,10 +24,10 @@ const run = async () => {
 
     console.log("Now wait " + interval * 1000 + " ms");
     await page.waitForTimeout(interval * 1000);
+    await browser.close();
   }
 
   // guess we'll never do this
-  await browser.close();
   console.log(`Total requests sent: ${totalRequests}`);
 };
 

@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-And then it was modified to send data to Honeycomb.
+And then it was modified to send data to Honeycomb, according to the [docs](https://docs.honeycomb.io/getting-data-in/opentelemetry/browser-js/).
 
 To use this app:
 1. Create an API key in Honeycomb with only permissions "Send data" and "Create dataset"

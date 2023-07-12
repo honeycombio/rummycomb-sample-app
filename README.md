@@ -7,7 +7,7 @@ And then it was modified to send data to Honeycomb, according to the [docs](http
 To use this app:
 
 1. Create an API key in Honeycomb with only permissions "Send data" and "Create dataset"
-2. Put that in the right environment variable:
+2. Put that in an environment variable:
 
 `export HONEYCOMB_API_KEY=yourapikeyhere`
 
@@ -20,13 +20,13 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\
+Runs the app in the development mode.
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes to App.js.\
 You may also see any lint errors in the console.
 
-### `npm load`
+### `npm run load`
 
 This will run the exciting generate-load.js script. This opens localhost:3000 in a headless browser, waits 5-10 seconds, then does it again.
 
